@@ -1,0 +1,16 @@
+This is a FUSE-based file system with custom implementations for make, open, close, read, write, getattr, access, rmdir, mknode, unlink, release and truncate operations. We divide the file into fixed-size blocks as opposed to variable-sized blocks. We compute the hash values of each block using SHA-1 algorithm and compare them with the existing hash values. This could be done each time a new file is written (eager) or it could be done periodically (lazy). We are using the eager approach.
+
+
+Steps:
+1. Open dedup.c and change path from "/home/hpkancha/dedup1" to "/home/<username>/dedup1  wherever the entry is found.
+
+2. Create a folder named 'dedup1' in /home/<username>/.
+
+3, Create two directories named 'Datastore' and 'Metastore' in the directory /home/<username>/dedup1.
+
+4. Go to DedupFinal and run make.
+
+5. Mount onto the desired directory.
+
+
+

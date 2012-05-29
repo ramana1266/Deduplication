@@ -1,0 +1,6 @@
+CFLAGS=-D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26
+LDFLAGS=-lfuse
+
+dedup: dedup.c
+	gcc $(LDFLAGS) $(CFLAGS) -o $@ $<
+
